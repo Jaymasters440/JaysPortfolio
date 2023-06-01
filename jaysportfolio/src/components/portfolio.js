@@ -32,6 +32,14 @@ function Portfolio() {
                 </div>
 
             )
+        } 
+        else if (page === "contact") {
+            return (
+                <div>
+                    <h1>Contact information</h1>
+                    <h3> https://github.com/Jaymasters440 jaymasters440@gmail.com </h3>
+                </div>
+            )
         }
         // do contact next(which will include forms from jass), then portfolio(which will include cards from jass)
     }
