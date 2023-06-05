@@ -4,7 +4,7 @@ import linkedinLogo from "../assets/1384014.png";
 
 function Footer(){
     return(
-        <div class="footer">
+        <div className="footer">
         <a href="https://github.com/Jaymasters440">
             <img src={gitHubLogo} height="90px" alt="github logo"></img>
         </a>

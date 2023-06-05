@@ -1,18 +1,42 @@
 import React, { useState } from "react";
 import "../jass.css";
 import Footer from "./footer";
-import Header from "./header";
-import Navbar from "./navbar";
 import pfp from "../assets/Me.JPG";
+import noteImage from "../assets/projects/Note.png";
+import resume from "../assets/Resume.docx"
 
 
+const Portfolio = () => {
 
-function Portfolio() {
-    const [page, setPage] = useState('resume');
+    const validEmail = new RegExp(
+        '^[a-zA-Z0-9._:$!%-]+@[a-zA-Z0-9.-]+.[a-zA-Z]$');
+    const [page, setPage] = useState('About');
+
+    const [email, setEmail] = useState("");
+    const [emailErr, setEmailErr] = useState(false);
+
+    const validateEmail = () => {
+        setEmailErr(!validEmail.test(email));
+    }
+
+
+    const [name, setName] = useState("");
+    const [nameErr, setNameErr] = useState(false);
+
+    const validateName = () => {
+        setNameErr(name.trim() === "");
+    }
+
+    const [message, setMessage] = useState("");
+    const [messageErr, setMessageErr] = useState(false);
+
+    const validateMessage = () => {
+        setMessageErr(message.trim() === "");
+    }
 
     //var pageHtml = "";
-    function renderPage() {
-        if (page === "about") {
+    function changePage() {
+        if (page === "About") {
             return (
                 <div>
                     <h1>About me</h1>
@@ -22,55 +46,162 @@ function Portfolio() {
 
             )
         }
-        else if (page === "resume") {
+        else if (page === "Resume") {
             return (
                 <div>
                     <h1>Work Experience</h1>
-                    <h3>My most recent job</h3>
-                    <small>this date-this date, this location</small>
-                    <p>what I did at the job</p>
+                    
+                    <p>Click <a href={resume} download>here</a>to download resume</p>
                 </div>
 
             )
-        } 
-        else if (page === "contact") {
+        }
+        else if (page === "Contact") {
             return (
-                <div>
+                <form>
                     <h1>Contact information</h1>
-                    <h3> https://github.com/Jaymasters440 jaymasters440@gmail.com </h3>
+                    <input type="email"
+                        className="form-input"
+                        placeholder="Email"
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)}
+                        onBlur={validateEmail}></input>
+                    {emailErr && <p className="error">Your email is invalid</p>}
+
+                    <input type="text"
+                        className="form-input"
+                        placeholder="Your name"
+                        value={name}
+                        onChange={(e) => setName(e.target.value)}
+                        onBlur={validateName}></input>
+                    {nameErr && <p className="error">Please enter your name</p>}
+
+                    <textarea type="text"
+                        className="form-input"
+                        placeholder="Message"
+                        value={message}
+                        onChange={(e) => setMessage(e.target.value)}
+                        onBlur={validateMessage}></textarea>
+                    {messageErr && <p className="error">Your message is invalid</p>}
+                    {(!emailErr&&!nameErr&&!messageErr&&message!==""&&email!==""&&name!=="")&&<button className="btn" >Submit</button>}
+                    
+                </form>
+            )
+        }
+        else if (page === "Portfolio") {
+            return (
+                <div className="container text-center">
+                    <h1>Portfolio</h1>
+                    <div className="flex-row justify-center">
+                        <div className="flex-column">
+                            <div className="card">
+
+
+                                <div className="card-header">
+                                    <h2>NoNoteMe Project </h2>
+                                </div>
+                                <div className="card-body">
+                                    <img src={noteImage}  alt="deployed Note app"></img>
+                                </div>
+                                <div className="card-footer">
+                                    <a href="https://asdjg-pajg-prgj.onrender.com/"><small>link to app</small></a>
+                                    <a href="https://github.com/Jaymasters440/NoNoteME"><small>link to code</small></a>
+                                </div>
+
+                                <div className="card-header">
+                                    <h2>CodeMonkeyCalendar Project </h2>
+                                </div>
+                                <div className="card-body">
+                                    <img src={noteImage}  alt="deployed calendar app"></img>
+                                </div>
+                                <div className="card-footer">
+                                    <a href="https://asdjg-pajg-prgj.onrender.com/"><small>link to app</small></a>
+                                    <a href="https://github.com/Jaymasters440/CodeMonkeyCalendar"><small>link to code</small></a>
+                                </div>
+
+                                <div className="card-header">
+                                    <h2>NoNoteMe Project </h2>
+                                </div>
+                                <div className="card-body">
+                                    <img src={noteImage}  alt="deployed Note app"></img>
+                                </div>
+                                <div className="card-footer">
+                                    <a href="https://asdjg-pajg-prgj.onrender.com/"><small>link to app</small></a>
+                                    <a href="https://github.com/Jaymasters440/NoNoteME"><small>link to code</small></a>
+                                </div>
+
+                                <div className="card-header">
+                                    <h2>NoNoteMe Project </h2>
+                                </div>
+                                <div className="card-body">
+                                    <img src={noteImage}  alt="deployed Note app"></img>
+                                </div>
+                                <div className="card-footer">
+                                    <a href="https://asdjg-pajg-prgj.onrender.com/"><small>link to app</small></a>
+                                    <a href="https://github.com/Jaymasters440/NoNoteME"><small>link to code</small></a>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div className="flex-column">
+                            <div className="card">
+
+
+                                <div className="card-header">
+                                    <h2>NoNoteMe Project </h2>
+                                </div>
+                                <div className="card-body">
+                                    <img src={noteImage} width="400px" alt="deployed Note app"></img>
+                                </div>
+                                <div className="card-footer">
+                                    <a href="https://asdjg-pajg-prgj.onrender.com/"><small>link to app</small></a>
+                                    <a href="https://github.com/Jaymasters440/NoNoteME"><small>link to code</small></a>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
                 </div>
             )
         }
         // do contact next(which will include forms from jass), then portfolio(which will include cards from jass)
     }
-    const handlePageChange=(newPage)=> { setPage(newPage) }
+    const handlePageChange = (newPage) => { setPage(newPage) }
 
 
 
     return (
 
-        <body>
-{/* when we run this, it recognizes the function, but we get an error that there are too many rerenders. not sure why it is rerendering */}
-{/* 
-<div class="navbar">
-        <a href="#about" onClick={handlePageChange('about')}>About Me</a>
-        <a href="#portfolio" onClick={handlePageChange("portfolio")}>Portfolio</a>
-        <a href="#contact" onClick={handlePageChange("contact")}>Contact Me</a>
-        <a href="#resume" onClick={handlePageChange("resume")}>Resume</a>
-        
-    </div> */}
+        <div>
+
+            <div className="page-header">
+                <h1>Jay's Portfolio</h1>
+
+                <div className="navbar">
+                    <a href="#about" onClick={() => handlePageChange('About')}>About Me</a>
+                    <a href="#portfolio" onClick={() => handlePageChange("Portfolio")}>Portfolio</a>
+                    <a href="#contact" onClick={() => handlePageChange("Contact")}>Contact Me</a>
+                    <a href="#resume" onClick={() => handlePageChange("Resume")}>Resume</a>
+
+                </div>
+
+            </div>
+            {/* when I run this, it recognizes the function, but we get an error that there are too many rerenders. not sure why it is rerendering */}
+
+
+            {/* setNavbar setPage={setPage} page={page}/> */}
 
 
             {/*when this is active, the program does not recognize the passed function as a function  */}
-      {/* <Navbar currentPage={page} changePage={handlePageChange()}/> */}
+            {/* <Navbar currentPage={page} changePage={handlePageChange()}/> */}
             {/* <Header currentPage={page} renderPage={handlePageChange} /> */}
-            <div class="project">
-                {renderPage()}
+            <div className="project text-center">
+                {changePage()}
             </div>
 
 
             <Footer />
-        </body>
+        </div>
     )
 }
 

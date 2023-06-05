@@ -1,12 +1,14 @@
 import React from "react";
 
-function navbar(currentPage,changePage){
+function navbar(props){
     return(
-        <div class="navbar">
-        <a href="#about" onClick={changePage('about')}>About Me</a>
-        <a href="#portfolio" onClick={changePage("portfolio")}>Portfolio</a>
-        <a href="#contact" onClick={changePage("contact")}>Contact Me</a>
-        <a href="#resume" onClick={changePage("resume")}>Resume</a>
+        
+           
+         <div className="navbar">
+         <a href="#about" onClick={props.setPage('about')}>About Me</a>
+         <a href="#portfolio" onClick={props.setPage("portfolio")}>Portfolio</a>
+         <a href="#contact" onClick={props.setPage("contact")}>Contact Me</a>
+         <a href="#resume" onClick={props.setPage("resume")}>Resume</a> 
         
     </div>
     )
