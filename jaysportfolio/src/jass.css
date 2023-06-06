@@ -12,7 +12,7 @@
 }
 .footer{
   text-align: center;
-  position: fixed;
+  position: relative;
   left: 0;
   bottom: 0;
   width: 100%;
@@ -20,6 +20,10 @@
 .error{
   color:white;
   font-weight: bold;
+}
+.project{
+  position: relative;
+  padding-bottom: 2.5;
 }
 
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
