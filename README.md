@@ -2,7 +2,7 @@
 My Professional Portfolio containing my resume, contact info and a portfolio of projects.
  ## Description
   
-  This is my Portfolio built with REACT and deployed on Heroku. It has a link to a resume which can be clicked on to downloaded. It also has featured projects with links to the projects as well. 
+  This is my Portfolio built with REACT and deployed on Heroku. It has a link to a resume which can be clicked on to download the resume. It also has featured projects with links to the projects as well as clicable links for my Github and Linkedin account. 
   
   ## Table of Contents 
   
