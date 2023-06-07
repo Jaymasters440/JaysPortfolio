@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/static/css/main.a23033eb.css",
+    "main.js": "/static/js/main.09694f46.js",
+    "static/js/787.7596cc62.chunk.js": "/static/js/787.7596cc62.chunk.js",
+    "static/media/Bookemon-demo.gif": "/static/media/Bookemon-demo.68c5901aab2e0621462c.gif",
+    "static/media/Me.JPG": "/static/media/Me.6092ad6572eafd67bb7b.JPG",
+    "static/media/calendar.gif": "/static/media/calendar.5b3f62cdcc4cafa34102.gif",
+    "static/media/Resume.docx": "/static/media/Resume.fc934f5412f69d76f045.docx",
+    "static/media/Weather.png": "/static/media/Weather.f4305dab58ca2457a315.png",
+    "static/media/logo192.png": "/static/media/logo192.345dc4a21070f9083ca7.png",
+    "static/media/Note.png": "/static/media/Note.e382df4a9fb199feb65c.png",
+    "static/media/1384014.png": "/static/media/1384014.032cf8a63be2f0f4d425.png",
+    "index.html": "/index.html",
+    "main.a23033eb.css.map": "/static/css/main.a23033eb.css.map",
+    "main.09694f46.js.map": "/static/js/main.09694f46.js.map",
+    "787.7596cc62.chunk.js.map": "/static/js/787.7596cc62.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a23033eb.css",
+    "static/js/main.09694f46.js"
+  ]
+}
