@@ -127,8 +127,8 @@ const Portfolio = () => {
                                     <img src={noteImage} width="400px" alt="deployed Note app"></img>
                                 </div>
                                 <div className="card-footer">
-                                    <a href="https://asdjg-pajg-prgj.onrender.com/"><small>link to app</small></a>
-                                    <a href="https://github.com/Jaymasters440/NoNoteME"><small>link to code</small></a>
+                                    <a href="https://github.com/Jaymasters440/MusicMonkey/blob/main/client/public/images/Screenshot%20(158).png"><small>link to app</small></a>
+                                    <a href="https://github.com/Jaymasters440/MusicMonkey"><small>link to code</small></a>
                                 </div>
                             </div>
 
